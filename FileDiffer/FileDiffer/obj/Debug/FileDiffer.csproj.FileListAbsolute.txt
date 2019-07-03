@@ -1,0 +1,11 @@
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csprojAssemblyReference.cache
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\VSPackage.resources
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csproj.GenerateResource.cache
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\DiffFilesCommandPackage.cto
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\VSCT.read.1.tlog
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\VSCT.write.1.tlog
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\resources.json
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\ctoFiles.json
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\VSPackage.resources.original
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\mergeCto.cache
+C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csproj.CoreCompileInputs.cache
