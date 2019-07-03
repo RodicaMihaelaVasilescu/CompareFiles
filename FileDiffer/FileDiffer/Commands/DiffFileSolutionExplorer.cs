@@ -19,6 +19,17 @@ namespace FileDiffer
         {
 
         }
+
+        public async void Execute(object sender, EventArgs e)
+        {
+            string file1, file2;
+            var menuCommand = (MenuCommand)sender;
+
+            if (CanFilesBeCompared(dte, out file1, out file2))
+            {
+                dte.ExecuteCommand("Tools.DiffFiles", $"\"{file1}\" \"{file2}\"");
+            }
+        }
         public static bool CanFilesBeCompared(DTE2 dte, out string file1, out string file2)
         {
             var items = GetSelectedFiles(dte);

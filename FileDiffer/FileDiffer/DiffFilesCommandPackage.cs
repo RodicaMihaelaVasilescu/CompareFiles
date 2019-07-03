@@ -6,6 +6,9 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
+using EnvDTE;
+using EnvDTE80;
+using FileDiffer.Commands;
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
@@ -44,6 +47,9 @@ namespace FileDiffer
         /// </summary>
         public const string PackageGuidString = "dfdc130f-85d5-4609-b48d-acb9812b67cd";
 
+        private CommandController commandController;
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DiffFilesCommandPackage"/> class.
         /// </summary>
@@ -69,7 +75,16 @@ namespace FileDiffer
             // When initialized asynchronously, the current thread may be a background thread at this point.
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
-            await DiffFilesCommand.InitializeAsync(this);
+
+            var dte = (DTE2)await this.GetServiceAsync(typeof(DTE));
+
+            //DiffFileOpenDocuments commandOpenDocs = new DiffFileOpenDocuments(dte, commandService, new Guid("8f4c6076-ae3c-4814-9c63-6c12b165db7c"), 0x0100);
+            //DiffFileSolutionExplorer commandSolutionExplorer = new DiffFileSolutionExplorer(dte, commandService, new Guid("69295e2b-8adf-477e-9029-ef1bfb58dc1f"), 0x0100);
+
+            commandController = new CommandController();
+            await commandController.InitializeAsync(this);
+            await FileDiffer.Commands.DiffOpenDocuments.InitializeAsync(this);
+
         }
 
         #endregion

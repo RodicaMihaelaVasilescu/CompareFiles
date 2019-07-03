@@ -1,5 +1,6 @@
 ﻿using EnvDTE;
 using EnvDTE80;
+using FileDiffer.Commands;
 using Microsoft.VisualStudio.Shell;
 using System;
 using System.Collections.Generic;
@@ -12,35 +13,20 @@ namespace FileDiffer
 {
     class BasicCommand
     {
-        protected DTE2 Dte;
+        protected DTE2 dte;
         protected OleMenuCommandService CommandService;
         protected static Guid CommandSet;
         protected int CommandId;
 
-        public BasicCommand(DTE2 dte, OleMenuCommandService commandService, Guid commandSet, int commandId)
+        public BasicCommand(DTE2 DTE, OleMenuCommandService commandService, Guid commandSet, int commandId)
         {
-            Dte = dte;
+            dte = DTE;
             CommandService = commandService;
             CommandSet = commandSet;
             CommandId = commandId;
 
-            var menuCommandID = new CommandID(CommandSet, CommandId);
-            var menuItem = new MenuCommand(this.Execute, menuCommandID);
-            commandService.AddCommand(menuItem);
-
         }
 
-        private async void Execute(object sender, EventArgs e)
-        {
-
-            string file1, file2;
-            var menuCommand = (MenuCommand)sender;;
-
-            if (CanFilesBeCompared(Dte, out file1, out file2))
-            {
-                dte.ExecuteCommand("Tools.DiffFiles", $"\"{file1}\" \"{file2}\"");
-            }
-        }
 
     }
 }

@@ -8422,11 +8422,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vasilescu Rodica\\Desktop\\FileDiffer\\FileDiffer\\FileDiffer.csproj",
+      "projectUniqueName": "C:\\Work\\Github\\FileDiff\\FileDiffer\\FileDiffer\\FileDiffer.csproj",
       "projectName": "FileDiffer",
-      "projectPath": "C:\\Users\\Vasilescu Rodica\\Desktop\\FileDiffer\\FileDiffer\\FileDiffer.csproj",
+      "projectPath": "C:\\Work\\Github\\FileDiff\\FileDiffer\\FileDiffer\\FileDiffer.csproj",
       "packagesPath": "C:\\Users\\Vasilescu Rodica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vasilescu Rodica\\Desktop\\FileDiffer\\FileDiffer\\obj\\",
+      "outputPath": "C:\\Work\\Github\\FileDiff\\FileDiffer\\FileDiffer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

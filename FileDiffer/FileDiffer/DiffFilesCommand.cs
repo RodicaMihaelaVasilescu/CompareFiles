@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EnvDTE;
 using EnvDTE80;
+using FileDiffer.Commands;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Task = System.Threading.Tasks.Task;
@@ -23,12 +24,13 @@ namespace FileDiffer
         /// <summary>
         /// Command ID.
         /// </summary>
-        //public const int CommandId = 0x0100;
+        public const int CommandId = 0x0100;
+        public const int CommandId2 = 0x0101;
 
         /// <summary>
         /// Command menu group (command set GUID).
         /// </summary>
-        //public static readonly Guid CommandSet = new Guid("8f4c6076-ae3c-4814-9c63-6c12b165db7c");
+        public static readonly Guid CommandSet = new Guid("8f4c6076-ae3c-4814-9c63-6c12b165db7c");
         //public static readonly Guid CommandSet2 = new Guid("69295e2b-8adf-477e-9029-ef1bfb58dc1f");
 
         /// <summary>
@@ -46,16 +48,18 @@ namespace FileDiffer
         {
             this.package = package ?? throw new ArgumentNullException(nameof(package));
             commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
-
+            //CreateCommand (commandService, CommandSet, CommandId);
+            //CreateCommand(commandService, CommandSet, CommandId2);
             LoadCommandsAsync(commandService);
         }
 
         private async Task LoadCommandsAsync(OleMenuCommandService commandService)
         {
-            var dte = (DTE2)await ServiceProvider.GetServiceAsync(typeof(DTE));
-            DiffFileOpenDocuments commandOpenDocs = new DiffFileOpenDocuments(dte, commandService, new Guid("8f4c6076-ae3c-4814-9c63-6c12b165db7c"), 0x0100);
-            DiffFileSolutionExplorer commandSolutionExplorer = new DiffFileSolutionExplorer(dte, commandService, new Guid("69295e2b-8adf-477e-9029-ef1bfb58dc1f"), 0x0100);
+            //var dte = (DTE2)await ServiceProvider.GetServiceAsync(typeof(DTE));
+            //DiffFileOpenDocuments commandOpenDocs = new DiffFileOpenDocuments(dte, commandService, new Guid("8f4c6076-ae3c-4814-9c63-6c12b165db7c"), 0x0100);
+            //DiffFileSolutionExplorer commandSolutionExplorer = new DiffFileSolutionExplorer(dte, commandService, new Guid("69295e2b-8adf-477e-9029-ef1bfb58dc1f"), 0x0100);
         }
+
         private void CreateCommand(OleMenuCommandService commandService, Guid CommandSet, int CommandId)
         {
             var menuCommandID = new CommandID(CommandSet, CommandId);
@@ -114,8 +118,8 @@ namespace FileDiffer
 
             string file1, file2;
             var menuCommand = (MenuCommand)sender;
-            bool canFilesBeCompared = menuCommand.CommandID.Guid == CommandSet ? 
-                CanFilesBeCompared(dte, out file1, out file2) : 
+            bool canFilesBeCompared = menuCommand.CommandID.Guid == CommandSet ?
+                CanFilesBeCompared(dte, out file1, out file2) :
                 CanFilesBeCompared2(dte, out file1, out file2);
 
             if (canFilesBeCompared)
