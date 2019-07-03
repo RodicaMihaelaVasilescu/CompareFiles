@@ -49,5 +49,10 @@ namespace FileDiffer.Commands
         {
             DiffOpenDocuments.InitializeAsync(package, this);
         }
+
+        internal void LaunchCommandAsync(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

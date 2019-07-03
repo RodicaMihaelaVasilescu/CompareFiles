@@ -54,6 +54,7 @@
     <Compile Include="Commands\BasicCommand.cs" />
     <Compile Include="Commands\CommandController.cs" />
     <Compile Include="Commands\DiffFileOpenDocuments.cs" />
+    <Compile Include="Commands\DiffOpenDocuments.cs" />
     <Compile Include="DiffFilesCommand.cs" />
     <Compile Include="DiffFilesCommandPackage.cs" />
     <Compile Include="Commands\DiffFileSolutionExplorer.cs" />
@@ -90,6 +91,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Commands\Resources\DiffOpenDocuments.png" />
     <Content Include="Resources\DiffFilesCommand.png" />
     <Content Include="Resources\DiffFilesCommandPackage.ico" />
   </ItemGroup>

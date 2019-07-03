@@ -31,3 +31,4 @@ C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.latest.pkgdef
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\extension.vsixmanifest
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\files.json
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\createTemplateManifests.cache
+C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\VSPackage.resources.original
