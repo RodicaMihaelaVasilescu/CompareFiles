@@ -42,6 +42,8 @@ namespace FileDiffer
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
     public sealed class DiffFilesCommandPackage : AsyncPackage
     {
+        #region Properties
+
         /// <summary>
         /// DiffFilesCommandPackage GUID string.
         /// </summary>
@@ -49,6 +51,9 @@ namespace FileDiffer
 
         private CommandController commandController;
 
+        #endregion
+
+        #region Constructor
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DiffFilesCommandPackage"/> class.
@@ -60,6 +65,8 @@ namespace FileDiffer
             // not sited yet inside Visual Studio environment. The place to do all the other
             // initialization is the Initialize method.
         }
+
+        #endregion
 
         #region Package Members
 
@@ -78,13 +85,8 @@ namespace FileDiffer
 
             var dte = (DTE2)await this.GetServiceAsync(typeof(DTE));
 
-            //DiffFileOpenDocuments commandOpenDocs = new DiffFileOpenDocuments(dte, commandService, new Guid("8f4c6076-ae3c-4814-9c63-6c12b165db7c"), 0x0100);
-            //DiffFileSolutionExplorer commandSolutionExplorer = new DiffFileSolutionExplorer(dte, commandService, new Guid("69295e2b-8adf-477e-9029-ef1bfb58dc1f"), 0x0100);
-
             commandController = new CommandController();
             await commandController.InitializeAsync(this);
-            await FileDiffer.Commands.DiffOpenDocuments.InitializeAsync(this);
-
         }
 
         #endregion

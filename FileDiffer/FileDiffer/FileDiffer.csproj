@@ -51,13 +51,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Commands\BasicCommand.cs" />
     <Compile Include="Commands\CommandController.cs" />
-    <Compile Include="Commands\DiffFileOpenDocuments.cs" />
-    <Compile Include="Commands\DiffOpenDocuments.cs" />
+    <Compile Include="Commands\ConstantsCommandIds.cs" />
+    <Compile Include="Commands\DiffOpenFilesCommand.cs" />
+    <Compile Include="Commands\DiffSolutionExplorerFilesCommand.cs" />
     <Compile Include="DiffFilesCommand.cs" />
     <Compile Include="DiffFilesCommandPackage.cs" />
-    <Compile Include="Commands\DiffFileSolutionExplorer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Commands\Resources\DiffOpenDocuments.png" />
+    <Content Include="Commands\Resources\DiffOpenFilesCommand.png" />
+    <Content Include="Commands\Resources\DiffSolutionExplorerCommand.png" />
     <Content Include="Resources\DiffFilesCommand.png" />
     <Content Include="Resources\DiffFilesCommandPackage.ico" />
   </ItemGroup>

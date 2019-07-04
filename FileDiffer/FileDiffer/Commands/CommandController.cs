@@ -1,58 +1,39 @@
-﻿using EnvDTE80;
-using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio.Shell;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Task = System.Threading.Tasks.Task;
 
 namespace FileDiffer.Commands
 {
     class CommandController
     {
-        //public async void LaunchCommandAsync(DTE2 dte, OleMenuCommandService commandService, Guid CommandSet, int CommandId)
-        //{
-        //    var menuCommandID = new CommandID(CommandSet, CommandId);
-        //    OleMenuCommand menuItem = null;
-
-        //    switch (CommandId)
-        //    {
-        //        case 0x0100:
-        //            {
-        //                var diffFileOpenDocumentsClass = new DiffFileOpenDocuments(dte, commandService, CommandSet, CommandId);
-        //                menuItem = new OleMenuCommand(diffFileOpenDocumentsClass.Execute, menuCommandID);
-        //                break;
-        //            }
-        //        case 0x0101:
-        //            {
-        //                var diffFileSolutionExplorerClass = new DiffFileOpenDocuments(dte, commandService, CommandSet, CommandId);
-        //                menuItem = new OleMenuCommand(diffFileSolutionExplorerClass.Execute, menuCommandID);
-        //                break;
-        //            }
-        //    }
-        //    commandService.AddCommand(menuItem);
-        //}
-
-
-        private void DiffFileSolutionExplorer(object sender, EventArgs e)
+        #region Public Methods
+        public async Task InitializeAsync(AsyncPackage package)
         {
-            throw new NotImplementedException();
+            await DiffOpenFilesCommand.InitializeAsync(package, this);
+            await DiffSolutionExplorerFilesCommand.InitializeAsync(package, this);
         }
 
-        private void DiffFileOpenDocuments(object sender, EventArgs e)
+        public void Execute(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
+            var menuCommand = (MenuCommand)sender;
 
-        public async System.Threading.Tasks.Task InitializeAsync(AsyncPackage package)
-        {
-            DiffOpenDocuments.InitializeAsync(package, this);
+            switch (menuCommand.CommandID.ID)
+            {
+                case ConstantsCommandIds.DiffOpenFilesCommandId:
+                    {
+                        DiffOpenFilesCommand.Instance.Execute(sender, e);
+                        break;
+                    }
+                case ConstantsCommandIds.DiffSolutionExplorerFilesCommandId:
+                    {
+                        DiffSolutionExplorerFilesCommand.Instance.Execute(sender, e);
+                        break;
+                    }
+                default:
+                    break;
+            }
         }
-
-        internal void LaunchCommandAsync(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
 }

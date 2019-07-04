@@ -77,6 +77,27 @@
           <ButtonText>Invoke DiffOpenDocuments</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidDiffFilesCommandPackageCmdSet" id="cmdidDiffOpenFilesCommand" priority="0x0100" type="Button">
+        <Parent guid="guidDiffFilesCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages2" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke DiffOpenFilesCommand</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDiffFilesCommandPackageCmdSet" id="cmdidDiffSolutionExplorerCommand" priority="0x0100" type="Button">
+        <Parent guid="guidDiffFilesCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages3" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke DiffSolutionExplorerCommand</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidDiffFilesCommandPackageCmdSet" id="cmdidCustomCommand" priority="0x0100" type="Button">
+        <Parent guid="guidDiffFilesCommandPackageCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidImages4" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Invoke CustomCommand</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -88,6 +109,8 @@
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
       <Bitmap guid="guidImages" href="Resources\DiffFilesCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
       <Bitmap guid="guidImages1" href="Commands\Resources\DiffOpenDocuments.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages2" href="Commands\Resources\DiffOpenFilesCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages3" href="Commands\Resources\DiffSolutionExplorerCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
     </Bitmaps>
   </Commands>
 
@@ -103,11 +126,10 @@
       <IDSymbol name="MyMenuGroup2" value="0x1021" />
       <IDSymbol name="DiffFilesCommandId2" value="0x0101" />
       <IDSymbol value="4130" name="cmdidDiffOpenDocuments" />
+      <IDSymbol value="4131" name="cmdidDiffOpenFilesCommand" />
+      <IDSymbol value="4132" name="cmdidDiffSolutionExplorerCommand" />
+      <IDSymbol value="4133" name="cmdidCustomCommand" />
     </GuidSymbol>
-    
-    <!--<GuidSymbol name="guidDiffFilesCommandPackageCmdSet2" value="{8f4c6076-ae3c-4814-9c63-6c12b165db7c}">
-
-    </GuidSymbol>-->
     
     <GuidSymbol name="guidImages" value="{b24c5843-770d-4891-8bde-443828aca8e3}">
       <IDSymbol name="bmpPic1" value="1" />
@@ -119,6 +141,33 @@
     </GuidSymbol>
   
     <GuidSymbol value="{ca204592-c84e-4879-909b-cc18bc15600e}" name="guidImages1">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{b7feec26-bf8d-48f6-adbd-065fb5491d81}" name="guidImages2">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{81f5ec95-e4dc-4c22-b581-2b01ae3a4039}" name="guidImages3">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{1dbd163e-134e-4cf5-998e-ce8a003e8af2}" name="guidImages4">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
       <IDSymbol name="bmpPicSearch" value="3" />

@@ -9,6 +9,11 @@ C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\ctoFiles.json
 C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\VSPackage.resources.original
 C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\mergeCto.cache
 C:\Users\Vasilescu Rodica\Desktop\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csproj.CoreCompileInputs.cache
+C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.dll
+C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.pdb
+C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.pkgdef
+C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.vsix
+C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\extension.vsixmanifest
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csprojAssemblyReference.cache
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\VSPackage.resources
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csproj.GenerateResource.cache
@@ -19,11 +24,6 @@ C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\resources.json
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\ctoFiles.json
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\mergeCto.cache
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.csproj.CoreCompileInputs.cache
-C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.dll
-C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.pdb
-C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.pkgdef
-C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\FileDiffer.vsix
-C:\Work\Github\FileDiff\FileDiffer\FileDiffer\bin\Debug\extension.vsixmanifest
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.dll
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.pdb
 C:\Work\Github\FileDiff\FileDiffer\FileDiffer\obj\Debug\FileDiffer.pkgdef
